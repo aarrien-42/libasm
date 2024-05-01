@@ -12,7 +12,7 @@ LIB_DIR = lib
 BIN_DIR = bin
 
 # FILES
-ASM_FILES = suma
+ASM_FILES = ft_strlen
 C_FILES = main
 SRC_FILES = $(ASM_FILES) $(C_FILES)
 
