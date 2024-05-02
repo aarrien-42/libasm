@@ -13,7 +13,7 @@ LIB_DIR = lib
 BIN_DIR = bin
 
 # FILES
-ASM_FILES = ft_strlen ft_strcpy ft_write ft_read
+ASM_FILES = ft_strlen ft_strcpy ft_strcmp ft_write ft_read
 C_FILES = main
 SRC_FILES = $(ASM_FILES) $(C_FILES)
 

@@ -75,8 +75,49 @@ void test_ft_strcpy() {
 	print_test_results_ft_strcpy(5, dst_expected, dst_returned, NULL, ret_returned);
 }
 
+void print_test_results_ft_strcmp(size_t test_nb, int expected, int returned) {
+	printf("  test %ld:\n", test_nb);
+	printf("    Expected: %d\n", expected);
+	printf("    Returned: %d\n", returned);
+}
+
+void test_ft_strcmp() {
+	char* s1_test_1 = "012";
+	char* s2_test_1 = "22";
+	char* s1_test_2 = "";
+	char* s2_test_2 = "";
+	char* s1_test_3 = "1";
+	char* s2_test_3 = "";
+	char* s1_test_4 = "";
+	char* s2_test_4 = "81";
+	int return1, return2;
+
+	print_function_test("ft_strcmp");
+	// Test 1
+	return1 = strcmp(s1_test_1, s2_test_1);
+	return2 = ft_strcmp(s1_test_1, s2_test_1);
+	print_test_results_ft_strcmp(1, return1, return2);
+	// Test 2
+	return1 = strcmp(s1_test_2, s2_test_2);
+	return2 = ft_strcmp(s1_test_2, s2_test_2);
+	print_test_results_ft_strcmp(2, return1, return2);
+	// Test 3
+	return1 = strcmp(s1_test_3, s2_test_3);
+	return2 = ft_strcmp(s1_test_3, s2_test_3);
+	print_test_results_ft_strcmp(3, return1, return2);
+	// Test 4
+	return1 = strcmp(s1_test_4, s2_test_4);
+	return2 = ft_strcmp(s1_test_4, s2_test_4);
+	print_test_results_ft_strcmp(4, return1, return2);
+	// Test 5
+	//return1 = strcmp(NULL, NULL);
+	return2 = ft_strcmp(NULL, NULL);
+	print_test_results_ft_strcmp(5, 0, return2);
+}
+
 int main() {
 	test_ft_strlen();
 	test_ft_strcpy();
+	test_ft_strcmp();
 	return 0;
 }
