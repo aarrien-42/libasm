@@ -8,6 +8,7 @@ TEST = test
 SRC_DIR = src
 ASM_DIR = asm
 OBJ_DIR = obj
+INC_DIR = inc
 LIB_DIR = lib
 BIN_DIR = bin
 
@@ -72,7 +73,7 @@ $(OBJ_DIR)/%.o: $(ASM_DIR)/%.s | $(OBJ_DIR)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	printf "$(MAGENTA)Compiling C:$(BLUE) $< $(DEF_COLOR)"
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -I $(INC_DIR) -o $@
 	echo "$(GREEN)OK$(DEF_COLOR)"
 
 # Library creation
