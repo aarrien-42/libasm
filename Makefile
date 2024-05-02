@@ -13,8 +13,8 @@ LIB_DIR = lib
 BIN_DIR = bin
 
 # FILES
-ASM_FILES = ft_strlen ft_strcpy ft_strcmp ft_write ft_read
-C_FILES = main
+ASM_FILES = ft_strlen ft_strcpy ft_strcmp ft_write ft_read ft_strdup
+C_FILES = main test
 SRC_FILES = $(ASM_FILES) $(C_FILES)
 
 SRC_C = $(addprefix $(SRC_DIR)/, $(addsuffix .c, $(C_FILES)))
@@ -62,7 +62,7 @@ run: $(BIN_DIR)/$(TEST)
 
 # Test executable creation
 $(BIN_DIR)/$(TEST): $(OBJ) $(LIB_DIR)/$(NAME) | $(BIN_DIR)
-	$(CC) $(CFLAGS) -o $@ $(OBJ_C) $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $@ $(OBJ_C) $(LDFLAGS) -no-pie
 	echo "$(YELLOW)Test program compiled!$(DEF_COLOR)"
 
 # Object compilation
