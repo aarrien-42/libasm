@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #include "libasm.h"
 
@@ -50,7 +51,7 @@ void test_ft_strcpy() {
 	char* src_test_1 = "Hello world!";
 	char* src_test_2 = "";
 	char* src_test_3 = "\n\r\t\b\f\'\"\\\0\v\a\?";
-	char* src_test_4 = "Large string doesn't fit";
+	char* src_test_4 = "Large string test";
 
 	print_function_test("ft_strcpy");
 	// Test 1
@@ -117,18 +118,40 @@ void test_ft_strcmp() {
 
 void print_test_results_ft_strdup(size_t test_nb, char* expected, char* returned, char* original) {
 	printf("  test %ld:\n", test_nb);
-	printf("  Original: %s [%p]\n", original, original);
-	printf("  Expected: %s [%p]\n", expected, expected);
-	printf("  Result:   %s [%p]\n", returned, returned);
+	printf("    Original: (%s) [%p]\n", original, original);
+	printf("    Expected: (%s) [%p]\n", expected, expected);
+	printf("    Result:   (%s) [%p]\n", returned, returned);
+	free(expected);
+	free(returned);
 }
 
 void test_ft_strdup() {
-	char* str_test_1 = "Hello world!";
 	char* r1;
 	char* r2;
+	char* str_test_1 = "Hello world!";
+	char* str_test_2 = "";
+	char* str_test_3 = "\n\r\t\b\f\'\"\\\0\v\a\?";
+	char* str_test_4 = "Large string test";
 
 	print_function_test("ft_strdup");
+	// Test 1
 	r1 = strdup(str_test_1);
 	r2 = ft_strdup(str_test_1);
 	print_test_results_ft_strdup(1, r1, r2, str_test_1);
+	// Test 2
+	r1 = strdup(str_test_2);
+	r2 = ft_strdup(str_test_2);
+	print_test_results_ft_strdup(2, r1, r2, str_test_2);
+	// Test 3
+	r1 = strdup(str_test_3);
+	r2 = ft_strdup(str_test_3);
+	print_test_results_ft_strdup(3, r1, r2, str_test_3);
+	// Test 4
+	r1 = strdup(str_test_4);
+	r2 = ft_strdup(str_test_4);
+	print_test_results_ft_strdup(4, r1, r2, str_test_4);
+	// Test 5
+	//r1 = strdup(NULL);
+	r2 = ft_strdup(NULL);
+	print_test_results_ft_strdup(5, NULL, r2, NULL);
 }
