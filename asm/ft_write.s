@@ -3,9 +3,12 @@ global ft_write ; Declare the symbol global
 
 ; Input: 
 ; - rdi = file descriptor
+; - rsi = constant buffer
+; - rdx = byte count
 ; Output: rax = bytes written
 ft_write:
-    xor rax, rax ; Set rax to 0
+    mov rax, 1 ; Set syscall to sys_write (rax = 1)
+    syscall
     ret
 
 ; Silence linker error
