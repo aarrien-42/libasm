@@ -20,3 +20,6 @@ List of functions to reproduce:
 - ft_list_size
 - ft_list_sort
 - ft_list_remove_if
+
+## Useful resources
+- [Linux system call table](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
