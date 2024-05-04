@@ -29,7 +29,7 @@ OBJ = $(OBJ_C) $(OBJ_ASM)
 NA = nasm
 NA_FLAGS = -f elf64
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -static
 LDFLAGS = -L./$(LIB_DIR) -lasm
 RM = rm -rf
 
@@ -62,7 +62,7 @@ run: $(BIN_DIR)/$(TEST)
 
 # Test executable creation
 $(BIN_DIR)/$(TEST): $(OBJ) $(LIB_DIR)/$(NAME) | $(BIN_DIR)
-	$(CC) $(CFLAGS) -o $@ $(OBJ_C) $(LDFLAGS) -no-pie
+	$(CC) $(CFLAGS) -o $@ $(OBJ_C) $(LDFLAGS)
 	echo "$(YELLOW)Test program compiled!$(DEF_COLOR)"
 
 # Object compilation
