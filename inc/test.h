@@ -8,6 +8,11 @@ void test_ft_strdup();
 
 #ifdef BONUS
 
+typedef struct s_list {
+	void			*data;
+	struct s_list	*next;
+} t_list;
+
 // bonus tests
 
 #endif
