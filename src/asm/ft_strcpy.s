@@ -1,5 +1,5 @@
 section .text
-global ft_strcpy ; Declare the symbol global
+    global ft_strcpy ; Declare the symbol global
 
 ; Input: 
 ; - rdi = dst string

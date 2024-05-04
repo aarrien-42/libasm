@@ -6,4 +6,10 @@ void test_ft_strcpy();
 void test_ft_strcmp();
 void test_ft_strdup();
 
+#ifdef BONUS
+
+// bonus tests
+
+#endif
+
 #endif

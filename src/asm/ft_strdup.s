@@ -1,6 +1,7 @@
+section .data
+    extern ft_strlen, ft_strcpy, malloc
 section .text
-extern ft_strlen, ft_strcpy, malloc
-global ft_strdup ; Declare the symbol global
+    global ft_strdup ; Declare the symbol global
 
 ; Input:  rdi = src string
 ; Output: rax = pointer to allocated string

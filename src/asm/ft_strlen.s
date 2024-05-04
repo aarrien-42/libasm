@@ -1,5 +1,5 @@
 section .text
-global ft_strlen ; Declare the symbol global
+    global ft_strlen ; Declare the symbol global
 
 ; Input: rdi = pointer to the beginning of the string
 ; Output: rax = length of the string

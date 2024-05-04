@@ -7,5 +7,12 @@ int main() {
 	// write tests
 	// read tests
 	test_ft_strdup();
+
+	#ifdef BONUS
+
+	// bonus tests
+
+	#endif
+
 	return 0;
 }

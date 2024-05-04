@@ -1,5 +1,5 @@
 section .text
-global ft_strcmp ; Declare the symbol global
+    global ft_strcmp ; Declare the symbol global
 
 ; Input: 
 ; - rdi = s1 string

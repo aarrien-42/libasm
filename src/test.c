@@ -155,3 +155,9 @@ void test_ft_strdup() {
 	r2 = ft_strdup(NULL);
 	print_test_results_ft_strdup(5, NULL, r2, NULL);
 }
+
+#ifdef BONUS
+
+// bonus tests
+
+#endif
