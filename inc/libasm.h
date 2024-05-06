@@ -10,6 +10,11 @@ extern char*	ft_strdup(const char *s);
 
 #ifdef BONUS
 
+typedef struct s_list {
+	void			*data;
+	struct s_list	*next;
+} t_list;
+
 // C Piscine C 04:
 extern int	ft_atoi_base(char *str, char *base);
 

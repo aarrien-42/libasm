@@ -13,7 +13,7 @@ typedef struct s_list {
 	struct s_list	*next;
 } t_list;
 
-// bonus tests
+void test_ft_atoi_base();
 
 #endif
 

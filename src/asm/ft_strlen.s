@@ -7,6 +7,7 @@ ft_strlen:
     cmp rdi, 0
     je .null_pointer ; Cheks if input is NULL
     mov rcx, rdi
+    xor rax, rax
     .loop:
         mov al, [rcx] ; Stores the value pointed by rcx in al (8 bit register)
         cmp al, 0

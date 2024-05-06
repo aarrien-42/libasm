@@ -158,6 +158,9 @@ void test_ft_strdup() {
 
 #ifdef BONUS
 
-// bonus tests
+void test_ft_atoi_base() {
+	int r = ft_atoi_base("   -13", "13213");
+	printf("RETURN = (%c)\n", r);
+}
 
 #endif

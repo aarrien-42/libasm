@@ -23,3 +23,4 @@ List of functions to reproduce:
 
 ## Useful resources
 - [Linux system call table](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
+- [x86_64 NASM Assembly Quick Reference](https://www.cs.uaf.edu/2017/fall/cs301/reference/x86_64.html)

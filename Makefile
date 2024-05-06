@@ -30,7 +30,7 @@ OBJ_BONUS = $(OBJ_C) $(OBJ_BONUS_ASM)
 
 # COMPILATION
 NA = nasm
-NA_FLAGS = -f elf64
+NA_FLAGS = -f elf64 -g
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -static
 LDFLAGS = -L./$(LIB_DIR) -lasm

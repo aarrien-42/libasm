@@ -10,7 +10,7 @@ int main() {
 
 	#ifdef BONUS
 
-	// bonus tests
+	test_ft_atoi_base();
 
 	#endif
 
